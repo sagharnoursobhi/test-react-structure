@@ -1,17 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import About from './About';
+import DidMount from './didMount';
+import GetDerived from './getDerived';
+import Home from './Home';
+import Navbar from './Navbar'
+import Refrence from './refrence';
+import UpdateSnap from './updateSnap';
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <>
+    <Navbar/>
+    <Home/>
+    <Refrence/>
+    <GetDerived favColor="yellow"/>
+    <DidMount/>
+    <UpdateSnap/>
+    <About/>
+  </>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
