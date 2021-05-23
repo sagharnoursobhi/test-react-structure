@@ -2,12 +2,11 @@
 import React , {useState} from 'react'
 import ExpenseDate from './ItemComponents/ExpenseDate'
 import './expenseItem.css'
-import ExpenseAmount from './ItemComponents/ExpenseAmount'
 
 
 
 
-function ExpenseItem(props) {
+function ExpenseItem(props) {//child
     const css = {
         backGround: '#3a3a3a',
         fontSize : '3rem',
@@ -16,10 +15,10 @@ function ExpenseItem(props) {
         color: 'white'
         
 }
-    
-   const [title , setTitle] = useState('updated')
-   const functionHandler = (event)=>{
-    setTitle(event.target.value);
+
+   const [element , setElement] = useState(props.title)
+   const onChangeHandler = ()=>{
+    setElement('updated');
    }
 
    
@@ -27,10 +26,10 @@ function ExpenseItem(props) {
         <div className='expense-item'>
             <ExpenseDate date={props.date}/>
             <div className='expense-item__description'>
-                <h2 style={css}>{title}</h2>
-                <div className='expense-item__price'><ExpenseAmount amount={props.amount}/></div>
-                <button onClick={functionHandler}>change</button>
+                <h2 style={css}>{element}</h2>
+                <div className='expense-item__price'>{props.amount}</div>
             </div>
+            <button onClick={onChangeHandler}>change</button>
         </div>
         )
 

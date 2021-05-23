@@ -3,12 +3,6 @@ import './expenceForm.css'
 
 function NewExpenseForm(props) {
 
-    // const [userInput , setUserInput] = useState({
-    //     enteredTitle:'',
-    //     enteredDate: '',
-    //     enteredPrice: ''
-    // })
-
     const [enteredTitle , setEnteredTitle] = useState('')//setEnteredtitle={enteredTitle:''}
 
     const [enteredDate , setEnteredDate] = useState('')
