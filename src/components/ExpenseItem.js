@@ -6,7 +6,7 @@ import './expenseItem.css'
 
 
 
-function ExpenseItem(props) {//child
+const ExpenseItem = (props)=> {//child
     const css = {
         backGround: '#3a3a3a',
         fontSize : '3rem',
@@ -16,20 +16,20 @@ function ExpenseItem(props) {//child
         
 }
 
-   const [element , setElement] = useState(props.title)
-   const onChangeHandler = ()=>{
-    setElement('updated');
-   }
+//    const [element , setElement] = useState(props.title)
+//    const onChangeHandler = ()=>{
+//     setElement('updated');
+//    }
 
    
     return (
         <div className='expense-item'>
             <ExpenseDate date={props.date}/>
             <div className='expense-item__description'>
-                <h2 style={css}>{element}</h2>
+                <h2 style={css}>{props.title}</h2>
                 <div className='expense-item__price'>{props.amount}</div>
             </div>
-            <button onClick={onChangeHandler}>change</button>
+            <button >change</button>
         </div>
         )
 

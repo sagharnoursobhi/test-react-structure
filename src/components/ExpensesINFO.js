@@ -1,7 +1,7 @@
 import React , {useState} from 'react' 
 import ExpenseItem from './ExpenseItem'
 import ExpensesFilter from './ExpensesFilter'
-function ExpensesInfo(props) {//parent , child os app.js
+const ExpensesInfo = (props)=> {//parent , child os app.js
     const expense = {
         padding: '1rem',
         backgroundColor: 'rgb(31, 31, 31)',

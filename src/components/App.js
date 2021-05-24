@@ -11,13 +11,13 @@ const dummy_expenses = [
 
 
 
-function App() {
+const App = () => {
 
-    const [expenses , setDummy_expenceItem] = useState(dummy_expenses)
+    const [expenses , setExpenseItem] = useState(dummy_expenses)
     
     const onAddNewExpenseHandler = (expense) =>{
 
-        setDummy_expenceItem(previousExpense=>{
+        setExpenseItem(previousExpense=>{
             return[expense , ...previousExpense]
         })
     }
